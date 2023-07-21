@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chris Fowler">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API | WDD330 Portfolio</title>
+    <meta name="description" content="Final Project Application for Web Design and Development 330 (WDD330) at Brigham Young University - Idaho (BYU-I). This app uses the NASA Image and Video Library API found at https://api.nasa.gov/. ">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&family=Sunflower:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
+    <!-- JavaScript -->
+    <script src="js/index.js" type="module"></script>
+    <script src="js/dates.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1> NASA Image & Video</h1>
+
+        <form id="search-form" class="center-align">
+            <div class="form-main">
+                <div id="back-container" class="btn-container"></div>
+                <label for="keyword" title="Enter a keyword">
+                    <input list="words" type="text" name="keyword" id="keyword" class="center-txt"
+                    placeholder="search a keyword" autofocus required>
+                    <datalist id="words">
+                        <option value="Black Hole">
+                        <option value="Favorites">
+                        <option value="Galaxy">
+                        <option value="Hurricane">
+                        <option value="Launch">
+                        <option value="Moon">
+                        <option value="Nebula">
+                        <option value="Pluto">
+                        <option value="Saturn">
+                        <option value="Sun">
+                        <option value="Supernova">
+                      </datalist>
+                </label>
+                <div class="btn-container">
+                    <button type="submit" id="search-btn" title="Search"><i class="fa fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="form-options">
+                <label for="image" class="right-txt">Images
+                    <input type="radio" name="mediaType" id="image" value="image" required checked>
+                </label>
+                <label for="video" class="center-txt">Videos
+                    <input type="radio" name="mediaType" id="video" value="video" required>
+                </label>
+                <label for="audio" class="left-txt">Audio
+                    <input type="radio" name="mediaType" id="audio" value="audio" required>
+                </label>
+            </div>
+        </form>
+    </header>
+
+    <main>
+        <div id="info" class="center-align ">
+            
+            <div id="result-block">
+                <h2 id="result-title">Welcome!</h2>
+                <ol id="results">
+                    <li class="tip">Search a keyword above to see NASA's results</li>
+                    <li class="tip">Try searching 'Pluto', 'Launch', or 'Nebula'</li>
+                    <li class="tip">Or literally any other keyword... be creative!</li>
+                    <li class="tip">Search 'Favorites' to see your list of favorites</li>
+                    <li class="tip">Your favorites are also organized by image and video</li>
+                </ol>
+            </div>
+
+            <div id="detail-block">
+                <h2 id="detail-title" class="small-hide">Media Details</h2>
+                <div id="details" class="center-txt small-hide">Click on a search result to see the details here...</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <span id="copyright">
+            &copy;<span id="year"></span>
+            <a href="https://github.com/KOFIWILLIAMS" title="Williams GitHub Portfolio">Williams Asomani</a>
+            - 
+            <a href="../" title="Web Design & Development 330 Portfolio Home Page">WDD330 Portfolio</a>
+        </span>
+        
+        <p>
+            This app uses the 
+            <a href="https://images.nasa.gov/"
+            title="NASA Image and Video Library ">
+            NASA Image and Video Library</a> API.
+            
+            Read the documentation here
+            <a href="https://images.nasa.gov/docs/images.nasa.gov_api_docs.pdf"
+            title="NASA Image and Video Library API Documentation">here</a>.
+        </p>
+    </footer>
+    
+</body>
+</html>
